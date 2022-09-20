@@ -16,12 +16,12 @@ setup(
     packages=find_packages(where="spcli-ui"),
     package_dir={"": "spcli-ui"},
     include_package_data=True,
-    package_data={"spcli-ui": ["*.py",]},
+    package_data={"": ["*.py",]},
 
     #zip_safe=False,
     entry_points='''
         [console_scripts]
-        spcli-ui=spcli-ui:main
+        cli-ui=cli-ui:main
     ''',
     python_requires=">=3.7, <4",
 )

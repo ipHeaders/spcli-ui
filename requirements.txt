@@ -1,0 +1,2 @@
+pyspcli
+simple-term-menu==1.5.0

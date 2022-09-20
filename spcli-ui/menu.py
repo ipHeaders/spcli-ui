@@ -6,7 +6,7 @@ menu_style = ("bg_red", "fg_yellow")
 
 def main_menu():
     title = "  Main Menu\n"
-    items = ["-quit","-orchestrator", "-appliance","-bgp","-flows","-qos"]
+    items = ["-quit","-orchestrator", "-appliance","-bgp","-flows","-qos","-ospf"]
 
 
     menu_exit = False
@@ -44,7 +44,7 @@ def orchestrator_menu():
 
 
 def sp_appliance_menu(device_list:list):
-    title = "  appliances\n"
+    title = "  select edge connect\n"
     items = ["-back"]
 
     for d in device_list:
@@ -63,8 +63,8 @@ def sp_appliance_menu(device_list:list):
     )
     return (menu,menu_back,items)
 
-def appliance_menu():
-    title = "  appliance\n"
+def appliance_menu(name):
+    title = f"  edge-device: {name}\n"
     items = ["-back", "-info", "-interfaces" ,"-stat_config", "-os_version","-banner","-dns","-syslog"]
     menu_back = False
     menu = TerminalMenu(
@@ -80,8 +80,8 @@ def appliance_menu():
     return (menu,menu_back,items)
 
 
-def bgp_menu():
-    title = "  bgp\n"
+def bgp_menu(name):
+    title = f"  bgp: {name}\n"
     items = ["-back","-config","-neighbors", "-summary"]
     menu_back = False
     menu = TerminalMenu(
@@ -96,9 +96,9 @@ def bgp_menu():
     )
     return (menu,menu_back,items)
 
-def flows_menu():
-    title = "  flows\n"
-    items = ["-back","-all","-ip", "-port","-app","-dscp","-active","-inactive"]
+def flows_menu(name):
+    title = f"  flows: {name}\n"
+    items = ["-back","-all","-active","-inactive","-ip", "-port","-app","-dscp"]
     menu_back = False
     menu = TerminalMenu(
         menu_entries=items,
@@ -112,9 +112,25 @@ def flows_menu():
     )
     return (menu,menu_back,items)
 
-def qos_menu():
-    title = "  qos\n"
+def qos_menu(name):
+    title = f"  qos {name}\n"
     items = ["-back","-inbound_shaper"]
+    menu_back = False
+    menu = TerminalMenu(
+        menu_entries=items,
+        title=title,
+        menu_cursor=cursor,
+        menu_cursor_style=menu_cursor_style,
+        menu_highlight_style=menu_style,
+        cycle_cursor=True,
+        clear_screen=False,
+        show_search_hint=True
+    )
+    return (menu,menu_back,items)
+
+def ospf_menu(name):
+    title = f"  ospf {name}\n"
+    items = ["-back","-config","-state"]
     menu_back = False
     menu = TerminalMenu(
         menu_entries=items,

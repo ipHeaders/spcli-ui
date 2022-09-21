@@ -74,3 +74,4 @@ Examples
 To use the user interface please use the following command::
     spui 
 
+demo:: docs/demo.gif

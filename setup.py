@@ -21,7 +21,7 @@ setup(
     #zip_safe=False,
     entry_points='''
         [console_scripts]
-        spcli_ui=spui:main
+        spui=spcli_ui:main
     ''',
     python_requires=">=3.7, <4",
 )

@@ -76,5 +76,5 @@ To use the user interface please use the following command::
     spui 
 
 
-.. only:: html
-   .. figure:: docs/demo.gif
+
+.. video:: docs/demo.gif

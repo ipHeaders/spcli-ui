@@ -78,4 +78,3 @@ To use the user interface please use the following command::
 
 
 .. image:: docs/demo.gif
-    .. contents::

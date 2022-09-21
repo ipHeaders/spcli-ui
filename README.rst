@@ -30,7 +30,7 @@ To get started, install the CLI tool from Pypi ::
 
 or download it directly from github::
 
-    pip3 install git+https://github.com/NetDevLazg/spcli-ui.git
+    pip3 install git+https://github.com/ipHeaders/spcli-ui.git
 
 Once the installation is successful, you will need to create a file with your api credentials.
 

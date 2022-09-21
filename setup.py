@@ -13,10 +13,10 @@ setup(
     py_modules=['spui'],
     setup_requires=["setuptools"],
     install_requires=install_requires,
-    packages=find_packages(where="spcli_ui"),
-    package_dir={"": "spcli_ui"},
+    packages=["spcli_ui"],
+    package_dir={"spcli_ui": "spcli_ui"},
     include_package_data=True,
-    package_data={"spcli_ui": ["*.py",]},
+    package_data={"": ["*.py",]},
 
     #zip_safe=False,
     entry_points='''

@@ -14,9 +14,9 @@ setup(
     setup_requires=["setuptools"],
     install_requires=install_requires,
     packages=find_packages(where="spcli_ui"),
-#    package_dir={"spcli_ui": "spcli_ui"},
+    package_dir={"": "spcli_ui"},
     include_package_data=True,
-    package_data={"": ["*.py",]},
+    package_data={"spcli_ui": ["*.py",]},
 
     #zip_safe=False,
     entry_points='''

@@ -10,7 +10,7 @@ install_requires = (here / 'requirements.txt').read_text(encoding='utf-8').split
 setup(
     name="pyspcli-ui",
     version='0.1.0',
-    py_modules=['spui'],
+ #   py_modules=['spui'],
     setup_requires=["setuptools"],
     install_requires=install_requires,
     packages=["spcli_ui"],

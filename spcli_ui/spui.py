@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 import os
-import sp_api
-from menu import *
+from .sp_api import APPLIANCE
+from .menu import *
 
 def get_id(device_list,name):
     for device in device_list:
@@ -21,7 +21,7 @@ def main():
     main_menu_exit = main[1]
     
 
-    silverpeaks = sp_api.APPLIANCE()._get_appliances_all()
+    silverpeaks = APPLIANCE()._get_appliances_all()
     sp_list = []
     for device in silverpeaks:
         sp_list.append([device['id'],device['hostName']])

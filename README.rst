@@ -77,4 +77,5 @@ To use the user interface please use the following command::
 
 
 
-.. video:: docs/demo.gif
+.. image:: docs/demo.gif
+    .. contents::
